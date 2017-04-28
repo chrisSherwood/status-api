@@ -1,3 +1,33 @@
-<h1>
+
+
+
+  <h2 class="ui-widget-header">
   {{title}}
-</h1>
+  </h2>
+
+<div class="ui-grid ui-grid-responsive ui-grid-pad">
+    <div class="ui-grid-row">
+      <div class="ui-grid-col-12">
+          <p-panel header="Show hide message" [style]="{'margin-top':'20px'}">
+          {{ clicked ? 'Yes Button' : 'No Button' }} clicked
+          </p-panel>
+
+          <p-panel header="Boolean if clicked" [style]="{'margin-top':'20px'}">
+          Get ready... <p *ngIf='clicked'>shown when button</p>
+          </p-panel>
+
+          <p-panel header="Show message" [style]="{'margin-top':'20px'}">
+          {{ message }}
+          </p-panel>
+      </div>
+    </div>
+    <div class="ui-grid-row">
+            <div class="ui-grid-col-2">
+                Add a value:
+            </div>
+            <div class="ui-grid-col-10">
+                <input type="text" [(ngModel)]="name" pInputText>
+                <button type="button" pButton label="Click" icon="fa fa-check" (click)="onclick($event)"></button>
+            </div>
+    </div>
+</div>

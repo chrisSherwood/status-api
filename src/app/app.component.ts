@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'BOOM it works!';
+  message:string;
+  name:string;
+  clicked:boolean = false;
+
+  onclick() {
+    this.message = 'You typed ' + this.name +  ' & clicked';
+    this.clicked = true;
+  }
 }
