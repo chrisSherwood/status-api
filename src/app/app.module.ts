@@ -6,10 +6,14 @@ import { HttpModule } from '@angular/http';
 import { InputTextModule, ButtonModule, SharedModule, PanelModule } from 'primeng/primeng'; 
 
 import { AppComponent } from './app.component';
+import { LangPipe } from './lang.pipe';
+import { TestingInputsComponent } from './testing-inputs/testing-inputs.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LangPipe,
+    TestingInputsComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +22,7 @@ import { AppComponent } from './app.component';
     ButtonModule,
     SharedModule,
     PanelModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

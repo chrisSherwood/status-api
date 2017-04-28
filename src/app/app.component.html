@@ -17,8 +17,9 @@
           </p-panel>
 
           <p-panel header="Show message" [style]="{'margin-top':'20px'}">
-          {{ message }}
+          {{ message | lang }}
           </p-panel>
+          <p [class]="title">bind test {{title}} has been binded to HTML</p>
       </div>
     </div>
     <div class="ui-grid-row">
@@ -29,5 +30,8 @@
                 <input type="text" [(ngModel)]="name" pInputText>
                 <button type="button" pButton label="Click" icon="fa fa-check" (click)="onclick($event)"></button>
             </div>
+    </div>
+    <div class="ui-grid-row">
+        <app-testing-inputs [passedData]="message"></app-testing-inputs>
     </div>
 </div>
